@@ -15,9 +15,9 @@
             
             <h1 class="text-white">Task Menager</h1>
             <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between" v-for="task in allTask" @click="task.fatto=true" :class="task.fatto?'text-decoration-line-through':''">
+                <li class="list-group-item d-flex justify-content-between" v-for="(task, i) in allTask" :key="i" @click="task.fatto=true" :class="task.fatto?'text-decoration-line-through':''">
                     {{task.testo}}
-                    <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                    <button type="button" class="btn btn-danger" @click="deleteTask(i)"><i class="fa-solid fa-trash"></i></button>
                 </li>
             </ul>
             <div class="align-items-end ">

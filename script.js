@@ -29,6 +29,9 @@ createApp({
             this.allTask = response.data;
             this.taskItem = '';
         })
+    },
+    deleteTask(index){
+        this.$delete(this.items.taskMenager, index);
     }
   },
   mounted(){

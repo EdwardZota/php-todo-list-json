@@ -29,6 +29,9 @@ createApp({
             this.allTask = response.data;
             this.taskItem = '';
         })
+    },
+    doIt(){
+        this.allTask.fatto
     }
   },
   mounted(){

@@ -15,7 +15,7 @@
             
             <h1 class="text-white">Task Menager</h1>
             <ul class="list-group">
-                <li class="list-group-item" v-for="task in allTask" ><p :class="task.fatto?'text-decoration-line-through':''">{{task.testo}}</p></li>
+                <li class="list-group-item" v-for="task in allTask" @click="task.fatto=true" :class="task.fatto?'text-decoration-line-through':''">{{task.testo}}</li>
             </ul>
             <div class="align-items-end ">
                 <input type="text" class="ms-3" v-model="taskItem">

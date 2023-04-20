@@ -1,6 +1,6 @@
 <?php
 
-$taskMenager:[
+    $taskMenager=[
         [
             'testo'=> 'Fare la Spesa',
             'fatto'=> false
@@ -19,6 +19,12 @@ $taskMenager:[
         ]
     ];
 
+    if(isset($_POST['task'])){
+        $taskMenager[] = [
+            'testo'=> $_POST['task'],
+            'fatto'=> false
+        ];
+    }
 
 header('Content-Type: application/json');
 

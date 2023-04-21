@@ -11,8 +11,7 @@
 <body class=" bg-info ">
 
     <div id="app" class=" vh-100">
-        <div class="container w-25 pt-5 d-flex flex-column justify-content-between 
-         bg-primary rounded-4 p-5">
+        <div class="container w-25 pt-5 d-flex flex-column justify-content-between mt-5 bg-primary rounded-5 p-5">
             
             <h1 class="text-white">Task Menager</h1>
             <ul class="list-group">

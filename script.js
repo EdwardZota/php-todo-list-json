@@ -17,19 +17,36 @@ createApp({
         })
     },
     addTask(){
-        const data = {
-            task:this.taskItem
-        };
+      const data = {
+          task:this.taskItem
+      };
+      this.axiosPostRequest(data);
 
-        axios.post('server.php',data,
-        {
-            headers: { 'Content-Type': 'multipart/form-data'}
-        }
-        ).then(response =>{
-          console.log(response.data)
-            this.allTask = response.data;
-            this.taskItem = '';
-        })
+      this.taskItem = '';
+        
+    },
+    doItTask(i){
+      const data ={
+        doIt: i
+      }
+      this.axiosPostRequest(data);
+
+    },
+    deleteTask(i){
+      const data ={
+        delete: i
+      }
+
+      this.axiosPostRequest(data);
+    },
+    axiosPostRequest(data){
+      axios.post('server.php',data,
+      {
+        headers: { 'Content-Type': 'multipart/form-data'}
+      }
+      ).then(response =>{
+        this.allTask = response.data;
+      })
     }
   },
   mounted(){

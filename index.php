@@ -11,17 +11,18 @@
 <body class=" bg-info ">
 
     <div id="app" class=" vh-100">
-        <div class="container w-25 pt-5 d-flex flex-column justify-content-between bg-primary rounded-4 mt-5 p-5">
+        <div class="container w-25 pt-5 d-flex flex-column justify-content-between 
+         bg-primary rounded-4 p-5">
             
             <h1 class="text-white">Task Menager</h1>
             <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between" v-for="(task, i) in allTask" :key="i" @click="task.fatto=true" :class="task.fatto?'text-decoration-line-through':''">
-                    {{task.testo}}
+                <li class="list-group-item d-flex justify-content-between" v-for="(task, i) in allTask" :key="i" :class="task.fatto?'text-decoration-line-through':''">
+                    <p @click="doItTask(i)" >{{task.testo}}</p>
                     <button type="button" class="btn btn-danger" @click="deleteTask(i)"><i class="fa-solid fa-trash"></i></button>
                 </li>
             </ul>
             <div class="align-items-end  mt-4">
-                <input type="text" class="ms-3" v-model="taskItem">
+                <input type="text" class="ms-3" v-model="taskItem" @keyup.enter="addTask">
                 <button class="btn btn-light ms-3" @click="addTask">Aggiungi Task</button>
             </div>
 

@@ -1,23 +1,5 @@
 <?php
 
-    $taskMenager=[
-        [
-            'testo'=> 'Fare la Spesa',
-            'fatto'=> false
-        ],
-        [
-            'testo'=> 'Dare da mangiare al cane',
-            'fatto'=> true
-        ],
-        [
-            'testo'=> "Tagliare l'erba del giardino",
-            'fatto'=> false
-        ],
-        [
-            'testo'=> 'Fare il riposino pomeridiano',
-            'fatto'=> true
-        ]
-    ];
 
     $dataBase= file_get_contents('taskMenager.json');
     $taskMenager= json_decode($dataBase,true);

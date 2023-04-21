@@ -26,12 +26,10 @@ createApp({
             headers: { 'Content-Type': 'multipart/form-data'}
         }
         ).then(response =>{
+          console.log(response.data)
             this.allTask = response.data;
             this.taskItem = '';
         })
-    },
-    deleteTask(index){
-        this.$delete(this.items.taskMenager, index);
     }
   },
   mounted(){

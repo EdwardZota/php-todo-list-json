@@ -11,7 +11,7 @@
 <body class=" bg-info ">
 
     <div id="app" class=" vh-100">
-        <div class="container w-25 h-75 pt-5 d-flex flex-column justify-content-between bg-primary rounded-4 mt-5 p-5">
+        <div class="container w-25 pt-5 d-flex flex-column justify-content-between bg-primary rounded-4 mt-5 p-5">
             
             <h1 class="text-white">Task Menager</h1>
             <ul class="list-group">
@@ -20,7 +20,7 @@
                     <button type="button" class="btn btn-danger" @click="deleteTask(i)"><i class="fa-solid fa-trash"></i></button>
                 </li>
             </ul>
-            <div class="align-items-end ">
+            <div class="align-items-end  mt-4">
                 <input type="text" class="ms-3" v-model="taskItem">
                 <button class="btn btn-light ms-3" @click="addTask">Aggiungi Task</button>
             </div>
